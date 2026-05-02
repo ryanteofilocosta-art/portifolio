@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: transparent;
+}
+
+.overlay {
+  width: 280px;
+  padding: 14px;
+  border-radius: 16px;
+
+  background: rgba(20, 20, 20, 0.65);
+  backdrop-filter: blur(12px);
+
+  color: white;
+  box-shadow: 
+  0 10px 30px rgba(0,0,0,0.5),
+  inset 0 0 10px rgba(255,255,255,0.05);
+
+  transition: all 0.2s ease;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* efeito ao passar o mouse */
+.overlay:hover {
+  transform: scale(1.02);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  -webkit-app-region: drag;
+}
+
+.header button {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header button:hover {
+  color: #fff;
+}
+
+/* LISTA */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+li span {
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+/* INPUT */
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* BOTÕES */
+button {
+  margin-left: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+/* SCROLL */
+ul::-webkit-scrollbar {
+  width: 4px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+/* IMPORTANTE */
+button, input {
+  -webkit-app-region: no-drag;
+}
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow:hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4CAF50;
+  transition: width 0.4s ease;
+}
+
+.item-enter {
+    opacity:0;
+    transform: translateY(-8px) scale(0.98);
+}
+
+.item-enter-active{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 0.25s ease;
+}
+
+
+button:active {
+    transform: scale(0.92);
+}
+
+li:hover {
+    background: rgba(255,255,255,0.06);
+    transform: translateX(2px);
+}
